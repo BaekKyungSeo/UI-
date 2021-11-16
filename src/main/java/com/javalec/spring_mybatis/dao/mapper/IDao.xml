@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.javalec.spring_mybatis.dao.IDao">
+	<select id="listDao" resultType="com.javalec.spring_mybatis.dto.ContentDto">
+		SELECT * FROM MEMBERLIST ORDER BY MID DESC
+	</select>
+	
+	
+	<insert id="writeDao">
+		INSERT INTO MEMBERLIST (MID, MNAME, MPHONE1, MPHONE2, MPHONE3, MADDRESS) VALUES (MEMBERLIST_SEQ.NEXTVAL, #{param1}, #{param2}, #{param3}, #{param4}, #{param5})
+	</insert>
+	
+	<select id="viewDao" resultType="com.javalec.spring_mybatis.dto.ContentDto">
+		SELECT * FROM MEMBERLIST WHERE MID = #{param1}
+	
+	</select>	
+	
+	<delete id="deleteDao">
+		DELETE FROM MEMBERLIST WHERE MID = #{param1}
+	</delete>
+	
+	<update id="modifyDao">
+		UPDATE MEMBERLIST SET MPHONE1 = #{param1}, MPHONE2 = #{param2}, MPHONE3 = #{param3}, MADDRESS = #{param4} WHERE mId = #{param5}  
+	</update>
+	
+	
+</mapper>
