@@ -1,12 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.Date"%>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원정보입력</title>
+<script type="text/javascript">
+   function check() {
+      if (fr.sName.value.length==0) {
+         alert("이름을 입력해 주세요.");
+         fr.sName.focus();
+         return false;
+      }
+      else if (fr.sPhone.value.length==0) {
+         alert("번호를 입력해 주세요.");
+         fr.sPhone.focus();
+         return false;
+      }else if(fr.sAddr.value.length==0){
+         alert("주소를 입력해주세요.")
+         fr.sAddr.focus();
+         return false;
+      }
+      else
+          return true;
+   }
+</script>
 <style>
 .jumbotron {
     width: 80%;
@@ -29,7 +51,7 @@ input[type=submit]{width: 80pt; height: 20pt; font-size:10pt;}
 </style>
 </head>
 <body>
-   <%@ include file="menu.jsp"%>
+   <%@ include file="header.jsp"%>
    <%!String greeting = "동호회 회원 관리";
    String tagline = "Welcome Member System";%>
    
@@ -51,7 +73,7 @@ input[type=submit]{width: 80pt; height: 20pt; font-size:10pt;}
 </table>
 <br>
 <table width="900" cellpadding="0" cellspacing="0" border="1" align="center">
-		<form action="write" method="post">
+		<form action="write" method="post"  onsubmit="return check()">
 			<tr>
 				<td align="center"> 회 원 이 름 </td>
 				<td>&nbsp; <input type="text" name="mName" > </td>
@@ -72,7 +94,7 @@ input[type=submit]{width: 80pt; height: 20pt; font-size:10pt;}
 				<td>&nbsp; <input type="text" name="mAddress" > </td>
 			</tr>
 			<tr height="50">
-				<td colspan="2" align="right"> <input type="button" value="회원목록보기" onclick="location.href='list'"> &nbsp;&nbsp; <input type="submit" value="회원입력완료">&nbsp;&nbsp; </td>
+				<td colspan="2" align="right"> <input type="button" value="회원목록보기" onclick="location.href='list'"> &nbsp;&nbsp; <input type="submit" value="회원입력완료" >&nbsp;&nbsp; </td>
 			</tr>
 		</form>
 </table>

@@ -10,9 +10,9 @@
 	<table class="t-type02" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tr height="40">
 			<td width="2%"> </td>
-			<td width="80%"><a href="${pageContext.request.contextPath}/index"> Home </a></td>
-			<td width="9%"><a href="list">회원리스트</a></td>
-			<td width="9%"><a href="writeForm">회원정보입력</a></td>
+			<td width="80%"><a class="b1" href="${pageContext.request.contextPath}/index"> Home </a></td>
+			<td width="9%"><a class="b1" href="list">회원리스트</a></td>
+			<td width="9%"><a class="b1" href="writeForm">회원정보입력</a></td>
 		</tr>
 		<tr>
 			<td height="50" colspan="6" bgcolor="#FFFFFF"> </td>

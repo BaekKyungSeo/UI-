@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.Date"%>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원정보수정</title>
+<script src="<c:url value='/resources/validation.js'/>" charset="UTF-8"></script>
 <style>
 .jumbotron {
     width: 80%;
@@ -28,7 +31,7 @@ a{text-decoration:none }
 </style>
 </head>
 <body>
-   <%@ include file="menu.jsp"%>
+   <%@ include file="header.jsp"%>
    <%!String greeting = "동호회 회원 관리";
    String tagline = "Welcome Member System";%>
    
@@ -71,7 +74,7 @@ a{text-decoration:none }
 				<td>&nbsp; ${view.mDate}</td>
 			</tr>
 			<tr height="50">
-				<td align="right" colspan="2"> <input type="submit" value="정보수정"> &nbsp;&nbsp; <a href="delete?mId=${view.mId}">회원삭제</a> &nbsp;&nbsp; <a href="list">회원목록보기</a>&nbsp;&nbsp;  </td>
+				<td align="right" colspan="2"> <input type="submit" value="정보수정"> &nbsp;&nbsp; <a href="delete?mId=${view.mId}"><input type="button" value="회원삭제"></a> &nbsp;&nbsp; <a href="list"><input type="button" value="회원목록보기"></a>&nbsp;&nbsp;  </td>
 			</tr>
 		</form>
 </table>

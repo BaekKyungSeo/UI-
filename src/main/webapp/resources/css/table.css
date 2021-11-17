@@ -8,18 +8,19 @@ table.t-type02{
 	font-size: 15px;	
 }
 
-a:link {
+a.b1:link {
    text-decoration: none;
-   color: #FFFFFF;
+   color: #FF9292;
 }
 
-a:visited {
-   color: #FFE8E8;
+a.b1:visited {
+   color: #FFDCDC;
    text-decoration: none;
 }
 
-a:hover {
+a.b1:hover {
 	text-decoration: none;
 	color: #FFDCDC;
 	font-size: 18px;
 }
+

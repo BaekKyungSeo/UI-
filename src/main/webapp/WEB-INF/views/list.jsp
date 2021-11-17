@@ -4,6 +4,7 @@
 <%@ page import="java.util.Date"%>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,7 +35,7 @@ a {
 </style>
 </head>
 <body>
-	<%@ include file="menu.jsp"%>
+   <%@ include file="header.jsp"%>
 	<%!String greeting = "동호회 회원 관리";
 	String tagline = "Welcome Member System";%>
 
