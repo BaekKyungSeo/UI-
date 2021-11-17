@@ -24,7 +24,8 @@
 	color: pink;
     text-shadow: 0px 1px 0px #C71585;
 }
-a{text-decoration:none }
+input[type=button]{width: 80pt; height: 20pt; font-size:10pt;}
+input[type=submit]{width: 80pt; height: 20pt; font-size:10pt;}
 </style>
 </head>
 <body>
@@ -71,7 +72,7 @@ a{text-decoration:none }
 				<td>&nbsp; <input type="text" name="mAddress" > </td>
 			</tr>
 			<tr height="50">
-				<td colspan="2" align="right"> <button type="button" onclick="location.href='list'">회원목록보기</button> &nbsp;&nbsp; <input type="submit" value="회원입력완료">&nbsp;&nbsp; </td>
+				<td colspan="2" align="right"> <input type="button" value="회원목록보기" onclick="location.href='list'"> &nbsp;&nbsp; <input type="submit" value="회원입력완료">&nbsp;&nbsp; </td>
 			</tr>
 		</form>
 </table>

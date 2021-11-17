@@ -5,6 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
 <meta charset="EUC-KR">
 <title>회원관리프로그램</title>
 <style>
@@ -14,7 +15,7 @@
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
-    background-color: lightpink;
+    background-color: #FFDEE9;
     color: white;
     text-shadow: 2px 2px 4px #C71585;
 }
@@ -24,13 +25,12 @@
 	color: pink;
     text-shadow: 0px 1px 0px #C71585;
 }
-a{text-decoration:none }
-#nav1{background:#FFC0CB; border-radius:15px; width:500px; height:100px; text-shadow: 2px 2px 4px #C71585; text-align:center; line-height:100px;}
-#nav2{background:#DDA0DD; border-radius:15px; width:500px; height:100px; text-shadow: 2px 2px 4px #9966CC; text-align:center; line-height:100px;}
+#nav1{background:#FFC0CB; border-radius:15px; width:500px; height:100px; text-shadow: 2px 2px 4px #FF5675; text-align:center; line-height:100px;}
+#nav2{background:#FFDEE9; border-radius:15px; width:500px; height:100px; text-shadow: 2px 2px 4px #FF5675; text-align:center; line-height:100px;}
 </style>
 </head>
 <body>
-   <%@ include file="menu.jsp"%>
+   <%@ include file="header.jsp"%>
    <%!String greeting = "동호회 회원 관리";
    String tagline = "Welcome Member System";%>
    

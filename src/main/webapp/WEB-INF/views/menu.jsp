@@ -3,7 +3,7 @@
 <%
    String sessionId = (String) session.getAttribute("sessionId");
 %>
-<nav class="navbar navbar-expand  navbar-light bg-light color:#9966CC;">
+<nav class="navbar navbar-expand" style="--mdb-bg-opacity:0.5">
    <div class="container">
       <div class="navbar-header">
          <a class="navbar-brand" href="index">Home</a>

@@ -3,13 +3,14 @@ package com.javalec.spring_mybatis.dto;
 
 public class ContentDto {
 
-	private int mId;
+	private String mId;
 	private String mName;
 	private String mPhone1;
 	private String mPhone2;
 	private String mPhone3;
 	private String mAddress;
 	private String mDate;
+	private int listCnt;
 	
 
 	public ContentDto() {
@@ -17,7 +18,7 @@ public class ContentDto {
 	}
 
 
-	public ContentDto(int mId, String mName, String mPhone1, String mPhone2, String mPhone3, String mAddress, String mDate) {
+	public ContentDto(int listCnt, String mId, String mName, String mPhone1, String mPhone2, String mPhone3, String mAddress, String mDate) {
 		super();
 		this.mId = mId;
 		this.mName = mName;
@@ -26,15 +27,26 @@ public class ContentDto {
 		this.mPhone3 = mPhone3;
 		this.mAddress = mAddress;
 		this.mDate = mDate;
+		this.listCnt = listCnt;
 	}
 
 
-	public int getmId() {
+	public int getListCnt() {
+		return listCnt;
+	}
+
+
+	public void setListCnt(int listCnt) {
+		this.listCnt = listCnt;
+	}
+
+
+	public String getmId() {
 		return mId;
 	}
 
 
-	public void setmId(int mId) {
+	public void setmId(String mId) {
 		this.mId = mId;
 	}
 
